@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('./assets/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#game-container {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+}
+
+#character {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    background-image: url('./assets/character.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#obstacle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-image: url('./assets/obstacle.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: moveObstacle 3s linear infinite;
+}
+
+#reward {
+    position: absolute;
+    bottom: 50px;
+    left: 500px;
+    width: 30px;
+    height: 30px;
+    background-image: url('./assets/reward.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@keyframes moveObstacle {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: 800px;
+    }
+}
